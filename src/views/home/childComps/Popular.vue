@@ -1,5 +1,9 @@
 <template>
-  $END$
+  <div class="popular">
+    <a href="https://act.mogujie.com/zzlx67" target="_blank">
+      <img src="~assets/img/home/recommend_bg.jpg" alt="" />
+    </a>
+  </div>
 </template>
 
 <script>
@@ -9,5 +13,7 @@
 </script>
 
 <style scoped>
-
+  .popular img{
+    width: 100%;
+  }
 </style>

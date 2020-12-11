@@ -77,10 +77,10 @@
       handleRomove(index){
         this.books.splice(index,1)
       },
-      // countClick(index){
-      //    if (this.books[index].count > 0);
-      //    return false
-      // }
+      countClick(index){
+         if (this.books[index].count > 0);
+         return false
+      }
     }
   }
 </script>
