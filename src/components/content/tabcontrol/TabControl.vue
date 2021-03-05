@@ -1,7 +1,7 @@
 <template>
   <div class="control">
-    <div v-for="(item, index) in title" class="control-item"
-         :class="{active: index == currentIndex}" @click="itemClick(index)">
+    <div v-for="(item, index) in title" class="controlItem"
+         :class="{active: index == currentIndex}" @click="itemClick(index)" :key="index">
       <span>{{item}}</span>
     </div>
   </div>
@@ -12,7 +12,7 @@
     name: "TabControl",
     data(){
       return{
-        currentIndex: 0
+        currentIndex: 0,
       }
     },
     props: {
@@ -28,8 +28,8 @@
         this.currentIndex = index;
         // 发送自定义事件，这里tabClick是自定义事件的名字，index是自定义事件的参数
         this.$emit('tabClick', index)
-      }
-    }
+      },
+    },
   }
 </script>
 
@@ -43,10 +43,10 @@
     line-height: 44px;
     background-color: #ffffff;
   }
-  .control-item{
+  .controlItem{
     flex: 1;
   }
-  .control-item span{
+  .controlItem span{
     padding: 5px;
   }
   .active{

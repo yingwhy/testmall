@@ -1,7 +1,7 @@
 <template>
   <div class="goods-item">
 <!--    <a :href="goodsItem.link"> </a> 写链接比较少，大部分是配置路由-->
-      <img :src="goodsItem.show.img" alt="" />
+      <img :src="goodsItem.show.img" alt="" @load = "imageLoad">
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
       <span class="price">￥{{goodsItem.price}}</span>
@@ -20,6 +20,11 @@
         default(){
           return {}
         }
+      }
+    },
+    methods: {
+      imageLoad(){
+        this.$bus.$emit('itemImageLoad')
       }
     }
   }

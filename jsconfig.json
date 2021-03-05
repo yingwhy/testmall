@@ -1,0 +1,48 @@
+// {
+//   // vue中格式化html代码
+//   "vetur.format.defaultFormatter.html": "js-beautify-html",
+//   // 即可自动添加文件后缀
+//   "path-autocomplete.extensionOnImport": true,
+  
+//   "emmetuseNewEmmet": false,
+//   "emmet.showAbbreviationSuggestions": true,
+//   "emmet.showExpandedAbbreviation": "always", // required to work with
+//   "emmet.includeLanguages": {
+//     "vue-html": "html",
+//     "vue": "html",
+//     "*.tpl": "html"
+//   },
+//   "files.associations": {
+//     "*.tpl": "html"
+//   },
+//   "emmet.triggerExpansionOnTab": true,
+//   "emmet.syntaxProfiles": {
+//     "vue-html": "html",
+//     "vue": "html"
+//   },
+//   "compilerOptions": {
+//            "target": "es2017",
+//            "allowSyntheticDefaultImports": false,
+//             "baseUrl": "./",
+//             "paths": {
+//                 "@/*": ["src/*"]
+//            },
+           
+//         },
+//         "exclude": ["node_modules", "dist"]
+// }
+
+// {
+//   "compilerOptions": {
+//       "target": "ES6",
+//       "module": "commonjs",
+//       "allowSyntheticDefaultImports": true,
+//       "baseUrl": "./",
+//       "paths": {
+//         "@/*": ["src/*"]
+//       }
+//   },
+//   "exclude": [
+//       "node_modules"
+//   ]
+// }

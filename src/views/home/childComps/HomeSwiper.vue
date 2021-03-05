@@ -3,7 +3,8 @@
     <swiper :options="swiperOption">
       <swiper-slide class="swiper-slide" v-for="(item, index) in banners" :key="index">
         <a :href="item.link">
-          <img :src="item.image" alt=""/>
+          <!-- <img :src="item.image" alt="" @load= "imageLoad"> -->
+          <img :src="item.image" alt="">
         </a>
       </swiper-slide>
       <!-- 分页器 -->
@@ -48,7 +49,8 @@
             disableOnInteraction: false,
           },
           //开启循环模式
-          loop: true
+          loop: true,
+          isLoad: false
         }
       }
     },
@@ -56,6 +58,15 @@
       swiper,
       swiperSlide,
     },
+    methods: {
+      // 容易犯错！！！！ 单词字母顺序，单词大小写，this!!!,这三个
+      // imageLoad(){
+      //     if( !this.isLoad ){
+      //       this.$emit('swiperImageLoad')
+      //       this.isLoad = true
+      //     }
+      // }
+    }
   }
 
 </script>
